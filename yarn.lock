@@ -1580,6 +1580,11 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
+"@remix-run/router@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.0.0.tgz#a2189335a5f6428aa904ccc291988567018b6e01"
+  integrity sha512-SCR1cxRSMNKjaVYptCzBApPDqGwa3FGdjVHc+rOToocNPHQdIYLZBfv/3f+KvYuXDkUGVIW9IAzmPNZDRL1I4A==
+
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-babel/-/plugin-babel-5.3.1.tgz#04bc0608f4aa4b2e4b1aebf284344d0f68fda283"
@@ -7077,7 +7082,7 @@ postcss@^7.0.35:
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.3.5, postcss@^8.4.14, postcss@^8.4.4, postcss@^8.4.7:
+postcss@^8.3.5, postcss@^8.4.14, postcss@^8.4.16, postcss@^8.4.4, postcss@^8.4.7:
   version "8.4.16"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.16.tgz#33a1d675fac39941f5f445db0de4db2b6e01d43c"
   integrity sha512-ipHE1XBvKzm5xI7hiHCZJCSugxvsdq2mPnsq5+UF+VHCjiBvtDrlxJfMBToWaP9D5XlgNmcFGqoHmUn0EYEaRQ==
@@ -7315,6 +7320,25 @@ react-refresh@^0.11.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
 
+react-ripples@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-ripples/-/react-ripples-2.2.1.tgz#bab529eb10e06f7e660561d97e2442a38b9f4687"
+  integrity sha512-TfLjgZICQlsYCN2iX4fdeZNjoDzhJVC7r+R3irqyaNvCtWezouS9j+sE+nwSk747irtV8RKRDHmwMmsNBOw8Qg==
+
+react-router-dom@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.4.0.tgz#a7d7c394c9e730b045cdd4f5d6c2d1ccb9e26947"
+  integrity sha512-4Aw1xmXKeleYYQ3x0Lcl2undHR6yMjXZjd9DKZd53SGOYqirrUThyUb0wwAX5VZAyvSuzjNJmZlJ3rR9+/vzqg==
+  dependencies:
+    react-router "6.4.0"
+
+react-router@6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.4.0.tgz#68449c23dc893fc7a57db068c19987be1de72edb"
+  integrity sha512-B+5bEXFlgR1XUdHYR6P94g299SjrfCBMmEDJNcFbpAyRH1j1748yt9NdDhW3++nw1lk3zQJ6aOO66zUx3KlTZg==
+  dependencies:
+    "@remix-run/router" "1.0.0"
+
 react-scripts@5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-5.0.1.tgz#6285dbd65a8ba6e49ca8d651ce30645a6d980003"
@@ -7369,6 +7393,11 @@ react-scripts@5.0.1:
     workbox-webpack-plugin "^6.4.1"
   optionalDependencies:
     fsevents "^2.3.2"
+
+react-top-loading-bar@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/react-top-loading-bar/-/react-top-loading-bar-2.3.1.tgz#d727eb6aaa412eae52a990e5de9f33e9136ac714"
+  integrity sha512-rQk2Nm+TOBrM1C4E3e6KwT65iXyRSgBHjCkr2FNja1S51WaPulRA5nKj/xazuQ3x89wDDdGsrqkqy0RBIfd0xg==
 
 react@^18.2.0:
   version "18.2.0"
@@ -8171,7 +8200,7 @@ symbol-tree@^3.2.4:
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
 
-tailwindcss@^3.0.2:
+tailwindcss@^3.0.2, tailwindcss@^3.1.8:
   version "3.1.8"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.1.8.tgz#4f8520550d67a835d32f2f4021580f9fddb7b741"
   integrity sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==
