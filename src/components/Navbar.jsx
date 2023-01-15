@@ -37,7 +37,7 @@ const Navbar = () =>{
       <>
       <LoadingBar color='#f11946' ref={ref} />
       <header className="fixed-tp-nav">
-        <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+        <nav className="bg-gray-900 border-gray-300 px-2 sm:px-4 py-2.5 dark:bg-[#121212]">
         <div className="flex flex-wrap justify-between items-center mx-auto">
           <span className="flex items-center">
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">

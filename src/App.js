@@ -8,9 +8,10 @@ import Navbar from './components/Navbar';
 import NotFound from './components/NotFound';
 import NoteState from './context/notes/NoteState';
 import ErrorBoundary from './ErrorBoundary'
+import Login from './components/Login';
 const App = () => {
   return (
-    <>
+    <div className='dark:bg-black'>
     <Router>
       <ErrorBoundary>
     <NoteState>
@@ -18,13 +19,14 @@ const App = () => {
     <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
+    <Route path="/login" element={<Login />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="*" element={<NotFound/>} />
     </Routes>
     </NoteState>
     </ErrorBoundary>
     </Router>
-    </>
+    </div>
   )
 }
 
