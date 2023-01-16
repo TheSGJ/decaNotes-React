@@ -9,6 +9,7 @@ import NotFound from './components/NotFound';
 import NoteState from './context/notes/NoteState';
 import ErrorBoundary from './ErrorBoundary'
 import Login from './components/Login';
+import Alert from './components/Alert';
 const App = () => {
   return (
     <div className='dark:bg-black'>
@@ -16,6 +17,7 @@ const App = () => {
       <ErrorBoundary>
     <NoteState>
       <Navbar />
+      <Alert message="Hello to my notes!" />
     <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
