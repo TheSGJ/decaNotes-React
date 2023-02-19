@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import NoteContext from './noteContext';
 
 const NoteState = (props) => {
-  const host = 'http://localhost:5000'
+  const host = process.env.REACT_APP_API_URL
   const notesValue = []
   // Add Note
   const getNotes = async () => {
@@ -15,6 +15,7 @@ const NoteState = (props) => {
     })
     const json = await response.json()
     console.log(json)
+    setNotes(json)
 
   }
   const addNote = async (title, description, tag) => {
