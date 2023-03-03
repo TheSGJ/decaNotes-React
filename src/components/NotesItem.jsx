@@ -8,23 +8,20 @@ const NotesItem = (props) => {
     const context = useContext(NoteContext)
     const { deleteNote } = context;
   return (
-    <div
-    className="block my-3 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md  dark:bg-gray-800 dark:border-gray-700"
-  >
-    <div className='hover:bg-gray-100 dark:hover:bg-gray-700 border-dashed'>
-
-    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-      {note.title}
-    </h5>
-    <p className="font-normal text-gray-700 dark:text-gray-400">
-    {note.description}
-    </p>
+<div className="p-4 md:w-1/3">
+  <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+    <div className="p-6">
+      <span className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{note.tag}</span>
+      <h1 className="title-font text-xl font-bold text-gray-200 mb-3">{note.title}</h1>
+      <p className="leading-relaxed text-gray-300 mb-3">{note.description}</p>
+      <div className="flex items-center flex-swrap">
+      <RiDeleteBin6Line onClick={()=>{deleteNote(note._id)}} className="w-6 h-6 mr-2 cursor-pointer dark:text-white" />
+      <FaEdit className="w-6 h-6 dark:text-white cursor-pointer" />
+       
+      </div>
     </div>
-    <span className='my-3' style={{display: 'flex', flexDirection: 'row'}}>
-    <RiDeleteBin6Line onClick={()=>{deleteNote(note._id)}} className="w-6 h-6 mr-2 cursor-pointer dark:text-white" />
-    <FaEdit className="w-6 h-6 dark:text-white cursor-pointer" />
-    </span>
   </div>
+</div>
   )
 }
 

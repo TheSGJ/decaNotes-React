@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect } from "react";
 import NoteContext from "../context/notes/noteContext";
 import NotesItem from "./NotesItem";
@@ -19,7 +18,7 @@ const Notes = () => {
     </h1>
     {notes.map((note, index) => {
       return (
-        <div className="h-full w-full flex items-center justify-center">
+        <div className="flex flex-wrap">
             <NotesItem key={index} note={note} />
         </div>
       )
