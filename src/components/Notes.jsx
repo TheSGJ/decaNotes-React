@@ -7,7 +7,7 @@ const Notes = () => {
     const context = useContext(NoteContext);
     const { notes, getNotes } = context;
     useEffect(()=>{
-      getNotes()
+      getNotes();
     })
   return (
     <>
