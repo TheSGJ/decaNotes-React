@@ -11,10 +11,12 @@ import NoteState from './context/notes/NoteState';
 import ErrorBoundary from './ErrorBoundary'
 import Login from './components/Login';
 import Alert from './components/Alert';
+import NextTopLoader from 'nextjs-toploader';
 const App = () => {
   return (
     <div className='dark:bg-black'>
     <Router>
+      <NextTopLoader color='red' showSpinner={false} />
       <ErrorBoundary>
     <NoteState>
       <Navbar />

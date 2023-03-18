@@ -1,9 +1,7 @@
-import React, { useState, useRef } from 'react'
-import LoadingBar from 'react-top-loading-bar';
+import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 
 const Navbar = () =>{
- const ref = useRef(null)
 
       const [ navClassMenu, setNavClassMenu ] = useState("hidden justify-between items-center w-full md:flex md:w-auto md:order-1")
       const [openMenuBar, setOpenMenuBar] = useState("w-6 h-6")
@@ -26,16 +24,13 @@ const Navbar = () =>{
         setCloseMenuBar("hidden w-6 h-6")
       }
       const clickLoadClose = () => {
-        ref.current.staticStart() 
         setNavClassMenu("hidden justify-between items-center w-full md:flex md:w-auto md:order-1")
         setOpenMenuBar("w-6 h-6")
         setCloseMenuBar("hidden w-6 h-6")
-        ref.current.complete()
       }
 
     return (
       <>
-      <LoadingBar color='#f11946' ref={ref} />
       <header className="fixed-tp-nav">
         <nav className="bg-gray-900 border-gray-300 px-2 sm:px-4 py-2.5 dark:bg-[#121212]">
         <div className="flex flex-wrap justify-between items-center mx-auto">
