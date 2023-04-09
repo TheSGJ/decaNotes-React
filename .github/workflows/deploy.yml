@@ -4,7 +4,7 @@ on:
 
     branches:
 
-      - "main" # change to the branch you wish to deploy from
+      - "master" # change to the branch you wish to deploy from
 
 permissions:
 
