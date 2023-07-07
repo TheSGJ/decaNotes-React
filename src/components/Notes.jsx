@@ -19,7 +19,7 @@ const Notes = () => {
     {notes.map((note, index) => {
       return (
         <div className="flex flex-wrap">
-            <NotesItem key={index} note={note} />
+            <NotesItem key={index} noteDetail={note} />
         </div>
       )
     })}
