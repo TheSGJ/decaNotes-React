@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import NoteContext from "../context/notes/noteContext";
 
 const AddNote = () => {
@@ -10,7 +10,7 @@ const AddNote = () => {
       addNote(note.title, note.description, note.tag)
     }
     const onChange = (e) =>{
-        setNote({...note, [e.target.name]: e.target.value})
+      setNote({...note, [e.target.name]: e.target.value})
     }
   return (
     <div className="container px-5 py-8 mx-auto">

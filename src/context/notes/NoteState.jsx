@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
+import { useState } from 'react';
 import NoteContext from './noteContext';
 
 const NoteState = (props) => {
-  const host = process.env.REACT_APP_API_URL
+  const host = import.meta.env.VITE_APP_API_URL
   const notesValue = []
   // Add Note
   const getNotes = async () => {
@@ -10,7 +11,7 @@ const NoteState = (props) => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjMzYjI3ZjU0N2I5MWIyMzYxYWVkMjJmIn0sImlhdCI6MTY2NDg3MzU5MX0.jizlYGrL27fjBV8ZEqhsYHnVzRcvGcS9Cge8JtJTprY"
+        "auth-token": localStorage.getItem("token")
       }
     })
     const json = await response.json()
@@ -22,7 +23,7 @@ const NoteState = (props) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjMzYjI3ZjU0N2I5MWIyMzYxYWVkMjJmIn0sImlhdCI6MTY2NDg3MzU5MX0.jizlYGrL27fjBV8ZEqhsYHnVzRcvGcS9Cge8JtJTprY"
+        "auth-token": localStorage.getItem("token")
       },
       body: JSON.stringify({title, description, tag})
     })
@@ -30,12 +31,9 @@ const NoteState = (props) => {
     const json = response.json()
     console.log(json)
     const note = {
-      "_id": "633c1bfc4916707dc03a67f8",
-      "user": "633b27f547b91b2361aed22f7",
       "title": title,
       "description": description,
       "tag": tag,
-      "date": "2022-10-04T11:41:48.452Z",
       "__v": 0
     }
     setNotes(notes.concat(note))
@@ -47,7 +45,7 @@ const NoteState = (props) => {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
-        "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjMzYjI3ZjU0N2I5MWIyMzYxYWVkMjJmIn0sImlhdCI6MTY2NDg3MzU5MX0.jizlYGrL27fjBV8ZEqhsYHnVzRcvGcS9Cge8JtJTprY"
+        "auth-token": localStorage.getItem("token")
       }
     })
     const json = response.json()
@@ -63,7 +61,7 @@ const NoteState = (props) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjMzYjI3ZjU0N2I5MWIyMzYxYWVkMjJmIn0sImlhdCI6MTY2NDg3MzU5MX0.jizlYGrL27fjBV8ZEqhsYHnVzRcvGcS9Cge8JtJTprY"
+        "auth-token": localStorage.getItem("token")
       },
       body: JSON.stringify({title, description, tag})
     })

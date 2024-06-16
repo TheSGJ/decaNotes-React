@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import NoteContext from "../context/notes/noteContext";
 import NotesItem from "./NotesItem";
 import AddNote from "./AddNote";
@@ -7,8 +7,7 @@ const Notes = () => {
     const { notes, getNotes } = context;
     useEffect(()=>{
       getNotes();
-      // eslint-disable-next-line
-    }, [])
+    }, [getNotes])
   return (
     <>
     <AddNote />
@@ -18,7 +17,7 @@ const Notes = () => {
     </h1>
     {notes.map((note, index) => {
       return (
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap" key={index}>
             <NotesItem key={index} noteDetail={note} />
         </div>
       )
